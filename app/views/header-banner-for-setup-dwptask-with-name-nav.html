@@ -1,0 +1,65 @@
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo" style="width:50%;">
+      <a href="/self-service/admin-self-service-1/maintain/added-organisations-maintain" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text" >
+            DWP Manage tasks
+            <!-- <span class="govuk-body white-text">&nbsp; Setup and maintain </span> -->
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="white-link">
+        <p style="text-align:right;"><span class="govuk-!-padding-right-9 white-link">Business area: {{ data['business-service-name'] | default('Common Capabilities') }}</span> <a href="/self-service/sign-in" class="white-link">Sign out</a></p>
+
+    </div>
+
+    <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+    <nav>
+      <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+        <li class="govuk-header__navigation-item " id="menu-dashboard">
+          <a class="govuk-header__link" href="/self-service/admin-self-service-1/maintain/dashboard">
+            Summary
+          </a>
+        </li>
+
+        <li class="govuk-header__navigation-item " id="menu-attributes">
+          <a class="govuk-header__link" href="/self-service/admin-self-service-1/maintain/attributes/attributes-list">
+            Attributes
+          </a>
+        </li>
+
+        <li class="govuk-header__navigation-item " id="menu-agents">
+          <a class="govuk-header__link" href="/self-service/admin-self-service-1/maintain/agents/agents-list">
+            Agent profiles
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item " id="menu-task-definitions">
+          <a class="govuk-header__link" href="/self-service/admin-self-service-1/maintain/task-definitions/task-defi">
+            Task definitions
+          </a>
+        </li>
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-tag--red">
+      Experimental
+    </strong> &nbsp;
+    <span class="govuk-phase-banner__text">
+      Set up and maintain your business area on DWP Manage tasks.
+    </span>
+  </p>
+</div>
+<br>
+{% endblock %}
